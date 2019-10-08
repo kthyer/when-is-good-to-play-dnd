@@ -1,21 +1,3 @@
-export const reasonsCantPlay = [
-  " has family unexpectedly coming to town",
-  " has laundry that needs to be done",
-  " will have a flat tire",
-  " won't have working hot water",
-  " will have a burrito and won't be able to move",
-  " kid will be sick",
-  " will have a migraine",
-  " will have really bad cramps",
-  "'s mom will be visiting",
-  "' dad will be visiting",
-  " will have a UTI",
-  " will poop their pants",
-  " will have terrible diarrhea",
-  " will be engrossing themselves in the rich tapestry of lore that is The Fast & The Furious series",
-  " will be travelling back in time to get the infinity stones"
-];
-
 export const DnDClasses = [
   "Barbarian",
   "Bard",

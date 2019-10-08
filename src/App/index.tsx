@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import { Container, Grid, Typography } from "@material-ui/core";
 import { DatePicker, MaterialUiPickersDate } from "@material-ui/pickers";
-import { Typography, Container, Grid } from "@material-ui/core";
-import dndLogo from "assets/dnd logo.png";
+import { DnDClasses, DnDRaces } from "../constants";
+import React, { useState } from "react";
+import reasons, { specialReasons } from "reasons";
+
 import Header from "components/Header";
-import { DnDClasses, DnDRaces, reasonsCantPlay } from "../constants";
+import dndLogo from "assets/dnd logo.png";
+import { format } from "date-fns";
 import { getRandomInt } from "utils";
 import useStyles from "./styles";
 
@@ -15,10 +18,19 @@ const App = () => {
     "Pick a date to see if it is a good day to meet up and play DnD"
   );
 
-  const onAccept = () => {
+  const onAccept = (date: any) => {
+    console.log(format(date, "MM/dd"));
     const randomClass = DnDClasses[getRandomInt(DnDClasses.length)];
-    const randomRace = DnDRaces[getRandomInt(DnDRaces.length)];
-    const randomReason = reasonsCantPlay[getRandomInt(reasonsCantPlay.length)];
+    const randomRace =
+      randomClass === "DM" ? "" : DnDRaces[getRandomInt(DnDRaces.length)];
+
+    const formattedDate = format(date, "MM/dd");
+
+    const specialDate = specialReasons[formattedDate];
+
+    const randomReason = specialDate
+      ? specialDate[getRandomInt(specialDate.length)]
+      : reasons[getRandomInt(reasons.length)];
 
     setReasonCantPlay(
       `That day doesn't work because your party's ${randomRace} ${randomClass}${randomReason} that day.`

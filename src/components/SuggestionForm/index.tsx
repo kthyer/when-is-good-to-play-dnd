@@ -1,15 +1,16 @@
-import React from "react";
 import {
   Button,
-  TextField,
   Dialog,
+  DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
+  TextField,
+  Zoom,
   useMediaQuery,
   useTheme
 } from "@material-ui/core";
-import useStyles from "./styles";
+
+import React from "react";
 
 interface SuggestionFormProps {
   open: boolean;
@@ -18,7 +19,6 @@ interface SuggestionFormProps {
 
 const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
   const theme = useTheme();
-  const classes = useStyles();
 
   const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -28,15 +28,12 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
       onClose={onClose}
       fullScreen={fullScreen}
       aria-labelledby="Suggestion-Form"
+      TransitionComponent={Zoom}
     >
-      <DialogTitle id="Suggestion-Form">Make A Suggestion</DialogTitle>
-      <DialogContent>
-        <form name="suggestions" method="post" className={classes.form}>
+      <form name="suggestions" method="post">
+        <DialogTitle id="Suggestion-Form">Make A Suggestion</DialogTitle>
+        <DialogContent>
           <input type="hidden" name="form-name" value="suggestions" />
-
-          <DialogContentText>
-            Suggest additional reasons why D&D won't be happening any time soon.
-          </DialogContentText>
           <TextField
             name="reasonSuggestions"
             variant="outlined"
@@ -47,10 +44,8 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
             autoFocus
             multiline
             rows="4"
+            helperText="Suggest additional reasons why D&D won't be happening any time soon."
           />
-          <DialogContentText className={classes.textMargin}>
-            Suggest features, improvements, or write a comment.
-          </DialogContentText>
           <TextField
             name="otherSuggestions"
             variant="outlined"
@@ -59,18 +54,17 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
             label="Other Suggestions"
             multiline
             rows="4"
+            helperText="Suggest features, improvements, or write a comment."
+            margin="normal"
           />
-          <Button
-            className={classes.submit}
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-          >
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={onClose}>Close</Button>
+          <Button type="submit" variant="contained" color="primary">
             Submit
           </Button>
-        </form>
-      </DialogContent>
+        </DialogActions>
+      </form>
     </Dialog>
   );
 };
