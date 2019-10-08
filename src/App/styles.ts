@@ -12,8 +12,14 @@ const useStyles = makeStyles((theme: Theme) =>
         MozOsxFontSmoothing: "grayscale"
       }
     },
+    logo: {
+      maxWidth: "100%"
+    },
     topMargin: {
       marginTop: theme.spacing(2)
+    },
+    bottomMargin: {
+      marginBottom: theme.spacing(2)
     }
   })
 );
