@@ -102,7 +102,15 @@ const reasons = [
   " is trying to figure out if there are Kings & Queens of the apocalypse",
   " is eating at the Yawning Portal",
   " is burning down the local barkeeps tavern",
-  " is undergoing an alignment change"
+  " is undergoing an alignment change",
+  " is updating the list of reasons why they cannot play DnD on a website",
+  " is 'stuck at work'",
+  " will be raiding on World of Warcraft",
+  " will be in prison due to copyright claims from WotC",
+  " will be going to the store to purchase a new microphone after breaking their old one because they cannot contain their rage",
+  " has anger management class",
+  " is writing their own campaign that is way cooler",
+  " will be practicing their voice acting"
 ];
 
 const newYearsDayReasons = [
