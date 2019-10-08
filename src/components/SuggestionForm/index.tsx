@@ -9,12 +9,14 @@ import {
   useMediaQuery,
   useTheme
 } from "@material-ui/core";
-
-import React from "react";
+import React, { MouseEvent } from "react";
 
 interface SuggestionFormProps {
   open: boolean;
-  onClose: any;
+  onClose: (
+    event: MouseEvent<HTMLButtonElement, MouseEvent> | {},
+    reason?: "backdropClick" | "escapeKeyDown"
+  ) => void;
 }
 
 const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {

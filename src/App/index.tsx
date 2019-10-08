@@ -1,12 +1,12 @@
 import { Container, Grid, Typography } from "@material-ui/core";
 import { DatePicker, MaterialUiPickersDate } from "@material-ui/pickers";
-import { DnDClasses, DnDRaces } from "../constants";
-import React, { useState } from "react";
+import { DnDClasses, DnDRaces } from "../constants/dnd";
+import React, { useEffect, useState } from "react";
 import reasons, { specialReasons } from "reasons";
 
 import Header from "components/Header";
 import dndLogo from "assets/dnd logo.png";
-import { format } from "date-fns";
+import { getHoliday } from "utils/date";
 import { getRandomInt } from "utils";
 import useStyles from "./styles";
 
@@ -18,15 +18,14 @@ const App = () => {
     "Pick a date to see if it is a good day to meet up and play DnD"
   );
 
+  useEffect(() => {}, [date]);
+
   const onAccept = (date: any) => {
-    console.log(format(date, "MM/dd"));
     const randomClass = DnDClasses[getRandomInt(DnDClasses.length)];
     const randomRace =
       randomClass === "DM" ? "" : DnDRaces[getRandomInt(DnDRaces.length)];
 
-    const formattedDate = format(date, "MM/dd");
-
-    const specialDate = specialReasons[formattedDate];
+    const specialDate = specialReasons[getHoliday(date)];
 
     const randomReason = specialDate
       ? specialDate[getRandomInt(specialDate.length)]

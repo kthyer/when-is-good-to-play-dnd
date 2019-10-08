@@ -16,66 +16,45 @@ const reasons = [
   " will be travelling back in time to get the infinity stones"
 ];
 
-const newYearsDay = "01/1";
-
 const newYearsDayReasons = [
   " is not following through with new years resolutions"
 ];
 
-const MLKDay = "01/21";
-
 const MLKDayReasons = [" has a dream"];
-
-const georgeWashingtonsBirhtday = "02/18";
 
 const georgeWashingtonsBirhtdayReasons = [" is getting wooden teeth"];
 
-const memorialDay = "05/27";
-
-const memorialDayReasons = [" is commemorating things"];
-
-const independenceDay = "07/04";
-
 const independenceDayReasons = [" is shooting fireworks"];
-
-const laborDay = "09/02";
 
 const laborDayReasons = [" is going into labor"];
 
-const columbusDay = "10/14";
-
 const columbusDayReasons = [" is stealing land"];
 
-const veteransDay = "11/11";
+const halloweenReasons = [" is trick or treating"];
 
 const veteransDayReasons = [" is honoring veterans"];
 
-const thanksgiving = "11/28";
-
 const thanksgivingReasons = [" is eating dinner with native americans"];
 
-const christmas = "12/25";
 const christmasReasons = [
   " is hanging out with Santa",
   " is watching Jingle All The Way"
 ];
 
-const newYearsEve = "12/31";
-
 const newYearsEveReasons = [" staying up late"];
 
 export const specialReasons: { [date: string]: Array<string> } = {
-  [newYearsDay]: newYearsDayReasons,
-  [MLKDay]: MLKDayReasons,
-  [georgeWashingtonsBirhtday]: georgeWashingtonsBirhtdayReasons,
-  [memorialDay]: memorialDayReasons,
-  [independenceDay]: independenceDayReasons,
-  [laborDay]: laborDayReasons,
-  [columbusDay]: columbusDayReasons,
-  [veteransDay]: veteransDayReasons,
-  [thanksgiving]: thanksgivingReasons,
-  [christmas]: christmasReasons,
-  [newYearsEve]: newYearsEveReasons
+  newYearsDay: newYearsDayReasons,
+  MLKDay: MLKDayReasons,
+  georgeWashingtonsBirhtday: georgeWashingtonsBirhtdayReasons,
+  independenceDay: independenceDayReasons,
+  laborDay: laborDayReasons,
+  columbusDay: columbusDayReasons,
+  halloween: halloweenReasons,
+  veteransDay: veteransDayReasons,
+  thanksgiving: thanksgivingReasons,
+  christmas: christmasReasons,
+  newYearsEve: newYearsEveReasons
 };
 
 export default reasons;

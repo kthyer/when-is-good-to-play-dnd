@@ -1,9 +1,7 @@
-import "./index.css";
-
 import * as serviceWorker from "./serviceWorker";
 
-import AppWrapper from "./AppWrapper";
 import App from "./App";
+import AppWrapper from "./AppWrapper";
 import React from "react";
 import ReactDOM from "react-dom";
 
