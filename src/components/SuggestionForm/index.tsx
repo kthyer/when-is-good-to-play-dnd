@@ -31,7 +31,9 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
     >
       <DialogTitle id="Suggestion-Form">Make A Suggestion</DialogTitle>
       <DialogContent>
-        <form name="suggestions" netlify className={classes.form}>
+        <form name="suggestions" data-netlify="true" className={classes.form}>
+          <input type="hidden" name="form-name" value="suggestions" />
+
           <DialogContentText>
             Suggest additional reasons why D&D won't be happening any time soon.
           </DialogContentText>
@@ -44,6 +46,7 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
             label="Reason Suggestions"
             autoFocus
             multiline
+            rows="4"
           />
           <DialogContentText className={classes.textMargin}>
             Suggest features, improvements, or write a comment.
@@ -55,6 +58,7 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
             id="otherSuggestions"
             label="Other Suggestions"
             multiline
+            rows="4"
           />
           <Button
             className={classes.submit}
