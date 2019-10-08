@@ -31,7 +31,7 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
     >
       <DialogTitle id="Suggestion-Form">Make A Suggestion</DialogTitle>
       <DialogContent>
-        <form name="suggestions" data-netlify="true" className={classes.form}>
+        <form name="suggestions" method="post" className={classes.form}>
           <input type="hidden" name="form-name" value="suggestions" />
 
           <DialogContentText>
