@@ -31,12 +31,7 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
     >
       <DialogTitle id="Suggestion-Form">Make A Suggestion</DialogTitle>
       <DialogContent>
-        <form
-          name="suggestions"
-          method="POST"
-          data-netlify="true"
-          className={classes.form}
-        >
+        <form name="suggestions" netlify className={classes.form}>
           <DialogContentText>
             Suggest additional reasons why D&D won't be happening any time soon.
           </DialogContentText>
