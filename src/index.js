@@ -1,10 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { render } from "preact";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// root holds our app's root DOM Element:
+let root;
+
+function init() {
+  root = render(<App />, document.body, root);
+}
+init();
+
+// example: Re-render on Webpack HMR update:
+if (module.hot) module.hot.accept("./App", init);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

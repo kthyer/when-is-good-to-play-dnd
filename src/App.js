@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
-import { Typography, Container } from "@material-ui/core";
+import { Typography, Container, CssBaseline } from "@material-ui/core";
 import dndLogo from "./assets/dnd logo.png";
 
 const reasons = [
@@ -35,7 +35,8 @@ const classes = [
   "Rogue",
   "Sorcerer",
   "Warlock",
-  "Wizard"
+  "Wizard",
+  "DM"
 ];
 
 const getRandomInt = max => {
@@ -49,11 +50,12 @@ const App = () => {
   const onAccept = () => {
     const randomClass = classes[getRandomInt(classes.length)];
     const randomReason = reasons[getRandomInt(reasons.length)];
-    setReasonCantPlay(`Your party's ${randomClass}${randomReason} that day.`);
+    setReasonCantPlay(`your party's ${randomClass}${randomReason} that day.`);
   };
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <CssBaseline />
       <div className="App">
         <header className="App-header">
           <img
@@ -76,7 +78,7 @@ const App = () => {
           <Container maxWidth="md">
             <Typography variant="h4" style={{ marginTop: 24 }}>
               {`${reasonCantPlay &&
-                "That day doesn't work because: "} ${reasonCantPlay}`}
+                "That day doesn't work because"} ${reasonCantPlay}`}
             </Typography>
           </Container>
         </header>
