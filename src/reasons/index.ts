@@ -110,7 +110,10 @@ const reasons = [
   " will be going to the store to purchase a new microphone after breaking their old one because they cannot contain their rage",
   " has anger management class",
   " is writing their own campaign that is way cooler",
-  " will be practicing their voice acting"
+  " will be practicing their voice acting",
+  " is watching the Star Wars Prequels for dank memes instead of playing",
+  "'s familiar will have escaped",
+  " will be founding an anarcho-syndicalist commune"
 ];
 
 const newYearsDayReasons = [
@@ -121,6 +124,13 @@ const newYearsDayReasons = [
 ];
 
 const MLKDayReasons = [" has a dream", " is marching", " is celebrating MLK"];
+
+const valentinesDayReasons = [
+  " is seducing a dragon",
+  " is being pursued by a secret admirer",
+  " will have eaten too many heart shaped candies and feel sick",
+  " will feel lonely for having no Valentine's day date"
+];
 
 const georgeWashingtonsBirthdayReasons = [
   " is getting wooden teeth",
@@ -175,6 +185,7 @@ const newYearsEveReasons = [" staying up late"];
 export const specialReasons: { [date: string]: Array<string> } = {
   newYearsDay: newYearsDayReasons,
   MLKDay: MLKDayReasons,
+  valentinesDay: valentinesDayReasons,
   georgeWashingtonsBirthday: georgeWashingtonsBirthdayReasons,
   independenceDay: independenceDayReasons,
   laborDay: laborDayReasons,
