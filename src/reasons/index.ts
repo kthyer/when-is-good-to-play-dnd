@@ -104,7 +104,18 @@ const reasons = [
   " will be burning down the local barkeeps tavern",
   " will be undergoing an alignment change",
   "'s in-laws are visiting and they're going to want to talk about work",
-  " will move to a different continent"
+  " will be moving to a different continent",
+  " will be updating the list of reasons why they cannot play DnD on a website",
+  " will be 'stuck at work'",
+  " will be raiding on World of Warcraft",
+  " will be in prison due to copyright claims from WotC",
+  " will be going to the store to purchase a new microphone after breaking their old one because they cannot contain their rage",
+  " has anger management class",
+  " will be writing their own campaign that is way cooler",
+  " will be practicing their voice acting",
+  " will be watching the Star Wars Prequels for dank memes instead of playing",
+  "'s familiar will have escaped",
+  " will be founding an anarcho-syndicalist commune"
 ];
 
 const newYearsDayReasons = [
@@ -115,6 +126,13 @@ const newYearsDayReasons = [
 ];
 
 const MLKDayReasons = [" has a dream", " is marching", " is celebrating MLK"];
+
+const valentinesDayReasons = [
+  " is seducing a dragon",
+  " is being pursued by a secret admirer",
+  " will have eaten too many heart shaped candies and feel sick",
+  " will feel lonely for having no Valentine's day date"
+];
 
 const georgeWashingtonsBirthdayReasons = [
   " is getting wooden teeth",
@@ -169,6 +187,7 @@ const newYearsEveReasons = [" staying up late"];
 export const specialReasons: { [date: string]: Array<string> } = {
   newYearsDay: newYearsDayReasons,
   MLKDay: MLKDayReasons,
+  valentinesDay: valentinesDayReasons,
   georgeWashingtonsBirthday: georgeWashingtonsBirthdayReasons,
   independenceDay: independenceDayReasons,
   laborDay: laborDayReasons,

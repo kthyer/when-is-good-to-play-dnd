@@ -32,6 +32,8 @@ export const getHoliday = (date: Date): string => {
   switch (formattedDate) {
     case "01/01":
       return "newYearsDay";
+    case "02/14":
+      return "valentinesDay";
     case "07/04":
       return "independenceDay";
     case "10/31":
