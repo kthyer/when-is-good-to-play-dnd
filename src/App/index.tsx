@@ -1,9 +1,5 @@
 import { Container, Grid, Typography } from "@material-ui/core";
-import {
-  DatePicker,
-  MaterialUiPickersDate,
-  TimePicker
-} from "@material-ui/pickers";
+import { StaticDatePicker, StaticTimePicker } from "@material-ui/pickers";
 import { DnDClasses, DnDRaces } from "../constants/dnd";
 import React, { useState } from "react";
 import reasons, { specialReasons } from "reasons";
@@ -17,7 +13,7 @@ import useStyles from "./styles";
 const App = () => {
   const classes = useStyles();
 
-  const [date, changeDate] = useState<MaterialUiPickersDate>(new Date());
+  const [date, changeDate] = useState<any>(new Date());
   const [reasonCantPlay, setReasonCantPlay] = useState(
     "Pick a date to see if it is a good day to meet up and play DnD"
   );
@@ -69,25 +65,20 @@ const App = () => {
         <Grid container justify="center" alignItems="center">
           <Grid item>
             {success ? (
-              <TimePicker
+              <StaticTimePicker
                 autoOk
                 orientation="landscape"
-                variant="static"
                 value={date}
                 onChange={changeDate}
                 onAccept={onAccept}
-                disableToolbar
               />
             ) : (
-              <DatePicker
+              <StaticDatePicker
                 autoOk
-                orientation="landscape"
-                variant="static"
                 openTo="date"
                 value={date}
                 onChange={changeDate}
                 onAccept={onAccept}
-                disableToolbar
                 disablePast
               />
             )}
