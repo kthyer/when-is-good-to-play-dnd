@@ -39,7 +39,6 @@ const SuggestionForm = ({ open, onClose }: SuggestionFormProps) => {
           <TextField
             name="reasonSuggestions"
             variant="outlined"
-            required
             fullWidth
             id="reasonSuggestions"
             label="Reason Suggestions"

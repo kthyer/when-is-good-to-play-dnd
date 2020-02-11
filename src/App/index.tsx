@@ -37,7 +37,7 @@ const App = () => {
       : reasons[getRandomInt(reasons.length)];
 
     setReasonCantPlay(
-      `That day doesn't work because your party's ${randomRace} ${randomClass}${randomReason} that day.`
+      `That day doesn't work because your party's ${randomRace} ${randomClass}${randomReason}.`
     );
 
     setSuccess(false);
