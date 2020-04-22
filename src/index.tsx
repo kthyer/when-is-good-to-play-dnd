@@ -1,14 +1,14 @@
 import * as serviceWorker from "./serviceWorker";
 
 import App from "./App";
-import AppWrapper from "./AppWrapper";
+import AppProviders from "./AppProviders";
 import React from "react";
 import ReactDOM from "react-dom";
 
 ReactDOM.render(
-  <AppWrapper>
+  <AppProviders>
     <App />
-  </AppWrapper>,
+  </AppProviders>,
   document.getElementById("root")
 );
 

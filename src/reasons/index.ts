@@ -115,29 +115,37 @@ const reasons = [
   " will be practicing their voice acting",
   " will be watching the Star Wars Prequels for dank memes instead of playing",
   "'s familiar will have escaped",
-  " will be founding an anarcho-syndicalist commune"
+  " will be founding an anarcho-syndicalist commune",
+  " will be in prison for murder",
 ];
 
 const newYearsDayReasons = [
   " is not following through with new years resolutions",
   " is getting over a hangover",
   " is at the gym wondering why they made this stupid new years resolution",
-  " will be forgetting what year to write for the next 4 months"
+  " will be forgetting what year to write for the next 4 months",
 ];
 
 const MLKDayReasons = [" has a dream", " is marching", " is celebrating MLK"];
+
+const blazeItDayReasons = [
+  " is blazin' it",
+  " is smokin dat ganja",
+  " is getting high on his own supply",
+  " is smokin dat dank kush",
+];
 
 const valentinesDayReasons = [
   " is seducing a dragon",
   " is being pursued by a secret admirer",
   " will have eaten too many heart shaped candies and feel sick",
-  " will feel lonely for having no Valentine's day date"
+  " will feel lonely for having no Valentine's day date",
 ];
 
 const georgeWashingtonsBirthdayReasons = [
   " is getting wooden teeth",
   " is running for president",
-  " is crossing the delaware"
+  " is crossing the delaware",
 ];
 
 const independenceDayReasons = [
@@ -145,25 +153,25 @@ const independenceDayReasons = [
   " is fighting aliens",
   " is signing the Declaration of Indepndence",
   " is stealing the Declaration of Indepndence",
-  " throwing tea off a boat"
+  " throwing tea off a boat",
 ];
 
 const laborDayReasons = [
   " is going into labor",
   " is delivering a baby",
-  " is laboring"
+  " is laboring",
 ];
 
 const columbusDayReasons = [
   " is stealing land",
   " will believe they are in India when they are actually in North America",
-  " is sailing the ocean blue"
+  " is sailing the ocean blue",
 ];
 
 const halloweenReasons = [
   " is trick or treating",
   " is giving candy to children",
-  " is being spooky"
+  " is being spooky",
 ];
 
 const veteransDayReasons = [" is honoring veterans", " "];
@@ -172,14 +180,14 @@ const thanksgivingReasons = [
   " is eating dinner with native americans",
   " is eating dinner with pilgrims",
   " is giving thanks",
-  " is eating dinner with their racist uncle"
+  " is eating dinner with their racist uncle",
 ];
 
 const christmasReasons = [
   " is hanging out with Santa",
   " is watching Jingle All The Way",
   " is going to the north pole",
-  " is reenacting all of the movie Elf"
+  " is reenacting all of the movie Elf",
 ];
 
 const newYearsEveReasons = [" staying up late"];
@@ -188,6 +196,7 @@ export const specialReasons: { [date: string]: Array<string> } = {
   newYearsDay: newYearsDayReasons,
   MLKDay: MLKDayReasons,
   valentinesDay: valentinesDayReasons,
+  blazeItDay: blazeItDayReasons,
   georgeWashingtonsBirthday: georgeWashingtonsBirthdayReasons,
   independenceDay: independenceDayReasons,
   laborDay: laborDayReasons,
@@ -196,7 +205,7 @@ export const specialReasons: { [date: string]: Array<string> } = {
   veteransDay: veteransDayReasons,
   thanksgiving: thanksgivingReasons,
   christmas: christmasReasons,
-  newYearsEve: newYearsEveReasons
+  newYearsEve: newYearsEveReasons,
 };
 
 export default reasons;

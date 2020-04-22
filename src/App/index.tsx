@@ -1,7 +1,7 @@
 import { Container, Grid, Typography } from "@material-ui/core";
-import { StaticDatePicker, StaticTimePicker } from "@material-ui/pickers";
 import { DnDClasses, DnDRaces } from "../constants/dnd";
 import React, { useState } from "react";
+import { StaticDatePicker, StaticTimePicker } from "@material-ui/pickers";
 import reasons, { specialReasons } from "reasons";
 
 import Header from "components/Header";
@@ -36,8 +36,13 @@ const App = () => {
       ? specialDate[getRandomInt(specialDate.length)]
       : reasons[getRandomInt(reasons.length)];
 
-    setReasonCantPlay(
+    // Temporarily disabled due to corona
+    /*setReasonCantPlay(
       `That day doesn't work because your party's ${randomRace} ${randomClass}${randomReason}.`
+    );*/
+
+    setReasonCantPlay(
+      "That day works because everyone is stuck at home! Get on Roll20!"
     );
 
     setSuccess(false);

@@ -6,7 +6,7 @@ import {
   isSameDay,
   setDay,
   setMonth,
-  startOfMonth
+  startOfMonth,
 } from "date-fns";
 
 export const getNthWeekdayOfMonth = (
@@ -19,7 +19,7 @@ export const getNthWeekdayOfMonth = (
   const firstDayOfMonth = startOfMonth(newDate);
   let weekStartsOn: any = getDay(firstDayOfMonth);
   const firstSpecifiedWeekday = setDay(firstDayOfMonth, weekday, {
-    weekStartsOn
+    weekStartsOn,
   });
   const nthWeekday = addWeeks(firstSpecifiedWeekday, week - 1);
 
@@ -34,6 +34,8 @@ export const getHoliday = (date: Date): string => {
       return "newYearsDay";
     case "02/14":
       return "valentinesDay";
+    case "04/20":
+      return "blazeItDay";
     case "07/04":
       return "independenceDay";
     case "10/31":
